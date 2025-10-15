@@ -1,0 +1,85 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║         ✅ GIT INSTALLED - FOLLOW THESE STEPS NOW           ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+⚠️  IMPORTANT: You MUST restart your terminal first!
+
+═══════════════════════════════════════════════════════════════
+
+📋 STEP-BY-STEP INSTRUCTIONS:
+
+1️⃣  CLOSE THIS POWERSHELL WINDOW
+    • Click the X button
+    • Or type: exit
+
+2️⃣  OPEN A NEW POWERSHELL WINDOW
+    • Right-click Start button
+    • Click "Windows PowerShell" or "Terminal"
+
+3️⃣  NAVIGATE TO YOUR PROJECT
+    Copy and paste this command:
+    
+    cd "C:\Users\os E18\Desktop\GenAi"
+
+4️⃣  RUN THE PUSH SCRIPT
+    Copy and paste this command:
+    
+    .\push-to-github.bat
+    
+    OR if that doesn't work, run these commands one by one:
+    
+    git config --global user.name "Your Name"
+    git config --global user.email "your@email.com"
+    git init
+    git add .
+    git commit -m "Initial commit: Material Selection AI"
+    git remote add origin https://github.com/MSathish01/material-selection-ai.git
+    git branch -M main
+    git push -u origin main
+
+5️⃣  ENTER YOUR CREDENTIALS
+    When asked:
+    • Username: MSathish01
+    • Password: Your Personal Access Token
+      (NOT your GitHub password!)
+
+═══════════════════════════════════════════════════════════════
+
+🔑 NEED A PERSONAL ACCESS TOKEN?
+
+1. Go to: https://github.com/settings/tokens
+2. Click "Generate new token (classic)"
+3. Name: "Material Selection AI"
+4. Select scope: "repo" (check the box)
+5. Click "Generate token"
+6. COPY the token immediately (you won't see it again!)
+7. Use this token as your password when pushing
+
+═══════════════════════════════════════════════════════════════
+
+✅ AFTER SUCCESSFUL PUSH:
+
+Your repository will be live at:
+https://github.com/MSathish01/material-selection-ai
+
+═══════════════════════════════════════════════════════════════
+
+💡 QUICK SUMMARY:
+
+1. Close this window
+2. Open new PowerShell
+3. cd "C:\Users\os E18\Desktop\GenAi"
+4. .\push-to-github.bat
+5. Enter credentials
+6. Done! 🎉
+
+═══════════════════════════════════════════════════════════════
+
+🆘 NEED HELP?
+
+• Read: PUSH_TO_YOUR_REPO.md (detailed guide)
+• Read: READY_TO_PUSH.txt (quick reference)
+
+═══════════════════════════════════════════════════════════════
