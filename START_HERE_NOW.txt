@@ -1,0 +1,82 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║                  🚀 START HERE - SIMPLE STEPS 🚀            ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+⚠️  YOU'RE SEEING "npm not recognized" OR "git not recognized"
+
+This means you need to RESTART YOUR TERMINAL!
+
+═══════════════════════════════════════════════════════════════
+
+✅ SOLUTION (3 SIMPLE STEPS):
+
+1️⃣  CLOSE THIS WINDOW
+    • Click the X button
+    • Or type: exit
+
+2️⃣  OPEN NEW POWERSHELL
+    • Right-click Start
+    • Click "Windows PowerShell" or "Terminal"
+
+3️⃣  RUN THESE COMMANDS:
+    
+    cd "C:\Users\os E18\Desktop\GenAi"
+    
+    .\push-to-github.bat
+
+═══════════════════════════════════════════════════════════════
+
+🔑 WHEN ASKED FOR CREDENTIALS:
+
+Username: MSathish01
+Password: Your Personal Access Token
+         (Get it from: https://github.com/settings/tokens)
+
+═══════════════════════════════════════════════════════════════
+
+📦 IF STILL NOT WORKING:
+
+You might need to install Node.js:
+• Download from: https://nodejs.org/
+• Install with default settings
+• Restart terminal
+• Try again
+
+═══════════════════════════════════════════════════════════════
+
+🎯 YOUR GOAL:
+
+Push your code to:
+https://github.com/MSathish01/material-selection-ai.git
+
+═══════════════════════════════════════════════════════════════
+
+💡 REMEMBER:
+
+After installing ANY software (Git, Node.js, etc.):
+→ ALWAYS restart your terminal!
+
+═══════════════════════════════════════════════════════════════
+
+📖 MORE HELP:
+
+• FIX_NPM_NOT_FOUND.md     → Fix npm issues
+• PUSH_TO_YOUR_REPO.md     → Push to GitHub guide
+• AFTER_GIT_INSTALL.txt    → After Git install steps
+
+═══════════════════════════════════════════════════════════════
+
+✨ QUICK SUMMARY:
+
+1. Close this window
+2. Open new PowerShell
+3. cd "C:\Users\os E18\Desktop\GenAi"
+4. .\push-to-github.bat
+5. Enter credentials
+6. Done! 🎉
+
+═══════════════════════════════════════════════════════════════
+
+NOW: Close this window and open a new one! 🚀
