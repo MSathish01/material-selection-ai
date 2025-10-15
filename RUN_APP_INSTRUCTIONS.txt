@@ -1,0 +1,85 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║              🚀 HOW TO RUN YOUR APPLICATION 🚀              ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+⚠️  IMPORTANT: You must do this in a NEW terminal window!
+
+═══════════════════════════════════════════════════════════════
+
+📋 STEP-BY-STEP INSTRUCTIONS:
+
+1️⃣  CLOSE THIS TERMINAL WINDOW
+    • Type: exit
+    • Press: ENTER
+
+2️⃣  OPEN NEW POWERSHELL
+    • Right-click Start button
+    • Click "Windows PowerShell" or "Terminal"
+
+3️⃣  NAVIGATE TO PROJECT
+    cd "C:\Users\os E18\Desktop\GenAi"
+
+4️⃣  RUN THE APPLICATION
+    npm run dev
+
+═══════════════════════════════════════════════════════════════
+
+✨ WHAT WILL HAPPEN:
+
+• Backend will start on: http://localhost:5000
+• Frontend will start on: http://localhost:3000
+• Your browser will open automatically
+• You'll see your Material Selection AI app!
+
+═══════════════════════════════════════════════════════════════
+
+🔧 IF npm STILL DOESN'T WORK:
+
+You need to install Node.js:
+
+Option A - Using winget:
+    winget install OpenJS.NodeJS.LTS
+
+Option B - Manual download:
+    1. Go to: https://nodejs.org/
+    2. Download LTS version
+    3. Install with default settings
+    4. Restart terminal
+    5. Try again
+
+═══════════════════════════════════════════════════════════════
+
+📦 AFTER RUNNING THE APP:
+
+To push to GitHub (in a separate terminal):
+    cd "C:\Users\os E18\Desktop\GenAi"
+    .\push-to-github.bat
+
+Your repository:
+    https://github.com/MSathish01/material-selection-ai.git
+
+═══════════════════════════════════════════════════════════════
+
+🎯 QUICK SUMMARY:
+
+1. Close this window (type: exit)
+2. Open new PowerShell
+3. cd "C:\Users\os E18\Desktop\GenAi"
+4. npm run dev
+5. Open http://localhost:3000 in browser
+6. Enjoy your app! 🎉
+
+═══════════════════════════════════════════════════════════════
+
+💡 REMEMBER:
+
+• Always use a NEW terminal after installing software
+• npm run dev starts both backend and frontend
+• Press Ctrl+C to stop the servers
+• Keep the terminal open while using the app
+
+═══════════════════════════════════════════════════════════════
+
+NOW: Type "exit" and press ENTER to close this window! 🚀
