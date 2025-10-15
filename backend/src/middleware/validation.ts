@@ -48,17 +48,18 @@ const materialQuerySchema = Joi.object({
   })
 });
 
-export const validateMaterialQuery = (req: Request, res: Response, next: NextFunction) => {
+export const validateMaterialQuery = (req: Request, res: Response, next: NextFunction): void => {
   const { error } = materialQuerySchema.validate(req.body);
   
   if (error) {
-    return res.status(400).json({
+    res.status(400).json({
       error: 'Validation error',
       details: error.details.map(detail => ({
         field: detail.path.join('.'),
         message: detail.message
       }))
     });
+    return;
   }
   
   next();

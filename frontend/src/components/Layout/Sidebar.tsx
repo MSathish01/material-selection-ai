@@ -23,6 +23,10 @@ import {
   Compare,
   Science,
   Analytics,
+  AutoAwesome,
+  DeviceHub,
+  TrendingUp,
+  LocalShipping,
 } from '@mui/icons-material';
 
 interface SidebarProps {
@@ -33,10 +37,17 @@ interface SidebarProps {
 const menuItems = [
   { text: 'Dashboard', icon: <Dashboard />, path: '/', badge: null },
   { text: 'Material Search', icon: <Search />, path: '/search', badge: null },
-  { text: 'AI Assistant', icon: <Chat />, path: '/chat', badge: 'New' },
+  { text: 'AI Assistant', icon: <Chat />, path: '/chat', badge: null },
   { text: 'Standards', icon: <Gavel />, path: '/standards', badge: null },
   { text: 'Sustainability', icon: <Nature />, path: '/sustainability', badge: null },
   { text: 'Comparison', icon: <Compare />, path: '/comparison', badge: null },
+];
+
+const advancedItems = [
+  { text: 'Generative Discovery', icon: <AutoAwesome />, path: '/generative', badge: 'New' },
+  { text: 'Digital Twin', icon: <DeviceHub />, path: '/digital-twin', badge: 'New' },
+  { text: 'Multi-Objective', icon: <TrendingUp />, path: '/optimization', badge: 'New' },
+  { text: 'Supply Chain', icon: <LocalShipping />, path: '/supply-chain', badge: 'New' },
 ];
 
 const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
@@ -106,6 +117,68 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
                   label={item.badge} 
                   size="small" 
                   color="success"
+                  sx={{ height: 20, fontSize: '0.7rem' }}
+                />
+              )}
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      
+      <Divider sx={{ my: 2 }} />
+      
+      <Box sx={{ px: 2, py: 2 }}>
+        <Typography variant="overline" color="text.secondary" sx={{ fontWeight: 600 }}>
+          Advanced Features
+        </Typography>
+      </Box>
+      
+      <List>
+        {advancedItems.map((item) => (
+          <ListItem key={item.text} disablePadding sx={{ mb: 0.5 }}>
+            <ListItemButton
+              selected={location.pathname === item.path}
+              onClick={() => handleNavigation(item.path)}
+              sx={{
+                mx: 1,
+                borderRadius: 2,
+                transition: 'all 0.2s',
+                '&.Mui-selected': {
+                  background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                  color: 'white',
+                  '&:hover': {
+                    background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                    opacity: 0.9,
+                  },
+                  '& .MuiListItemIcon-root': {
+                    color: 'white',
+                  },
+                },
+                '&:hover': {
+                  backgroundColor: 'rgba(240, 147, 251, 0.08)',
+                },
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  color: location.pathname === item.path ? 'inherit' : 'text.primary',
+                  minWidth: 40,
+                }}
+              >
+                {item.icon}
+              </ListItemIcon>
+              <ListItemText 
+                primary={item.text}
+                primaryTypographyProps={{
+                  fontSize: '0.85rem',
+                  fontWeight: location.pathname === item.path ? 600 : 400,
+                }}
+              />
+              {item.badge && (
+                <Chip 
+                  label={item.badge} 
+                  size="small" 
+                  color="secondary"
                   sx={{ height: 20, fontSize: '0.7rem' }}
                 />
               )}

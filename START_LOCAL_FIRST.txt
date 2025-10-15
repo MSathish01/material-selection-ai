@@ -1,0 +1,139 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                   ⚠️  FIX: START LOCAL DEVELOPMENT FIRST ⚠️                  ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🔴 PROBLEM DETECTED:
+
+Your backend server is not running! That's why you're getting ECONNREFUSED errors.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ SOLUTION - Start Local Development:
+
+STEP 1: Open PowerShell Terminal #1 - Start Backend
+────────────────────────────────────────────────────
+cd backend
+npm install
+npm run dev
+
+You should see:
+"Server running on port 5000"
+"Connected to MongoDB"
+
+Keep this terminal OPEN!
+
+STEP 2: Open PowerShell Terminal #2 - Start Frontend
+────────────────────────────────────────────────────
+cd frontend
+npm install
+npm start
+
+You should see:
+"Compiled successfully!"
+"webpack compiled"
+
+Browser will open at http://localhost:3000
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔧 BEFORE FIREBASE DEPLOYMENT:
+
+1. ✅ Make sure local development works first
+2. ✅ Backend running on http://localhost:5000
+3. ✅ Frontend running on http://localhost:3000
+4. ✅ Can access the app in browser
+5. ✅ Database connection working
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🚀 THEN DEPLOY TO FIREBASE:
+
+STEP 1: Create Firebase Project
+────────────────────────────────
+1. Go to https://console.firebase.google.com/
+2. Click "Add project"
+3. Name it: material-selection-ai
+4. Click "Create project"
+5. COPY THE PROJECT ID (e.g., material-selection-ai-abc123)
+
+STEP 2: Update .firebaserc
+────────────────────────────────
+{
+  "projects": {
+    "default": "YOUR_ACTUAL_PROJECT_ID"
+  }
+}
+
+Replace "your-project-id" with the ID you copied!
+
+STEP 3: Initialize Firebase
+────────────────────────────────
+firebase init
+
+Select:
+- Hosting
+- Use existing project
+- Select your project
+- Public directory: frontend/build
+- Single-page app: Yes
+
+STEP 4: Deploy
+────────────────────────────────
+cd frontend
+npm run build
+cd ..
+firebase deploy --only hosting
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📝 QUICK REFERENCE:
+
+Start Backend:
+  cd backend && npm run dev
+
+Start Frontend:
+  cd frontend && npm start
+
+Build Frontend:
+  cd frontend && npm run build
+
+Deploy to Firebase:
+  firebase deploy --only hosting
+
+View Firebase Projects:
+  firebase projects:list
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚠️  IMPORTANT:
+
+1. ALWAYS start backend BEFORE frontend
+2. Backend must run on port 5000
+3. Frontend will proxy requests to backend
+4. Check .env file has GEMINI_API_KEY or OPENAI_API_KEY
+5. Check backend/.env has MONGODB_URI
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 RIGHT NOW, DO THIS:
+
+Terminal 1:
+  cd backend
+  npm run dev
+
+Terminal 2:
+  cd frontend
+  npm start
+
+Then visit: http://localhost:3000
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Need help? Check:
+→ FIREBASE_FIX_STEPS.md (detailed troubleshooting)
+→ RUN_APPLICATION.md (local development guide)
+→ TROUBLESHOOTING.md (common issues)
+
+═══════════════════════════════════════════════════════════════════════════════

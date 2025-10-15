@@ -37,10 +37,17 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
       position="fixed" 
       sx={{ 
         zIndex: (theme) => theme.zIndex.drawer + 1,
-        boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+        boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
       }}
     >
-      <Toolbar sx={{ minHeight: { xs: 56, sm: 64 }, py: { xs: 0.5, sm: 1 } }}>
+      <Toolbar 
+        sx={{ 
+          minHeight: { xs: 48, sm: 56 }, 
+          py: { xs: 0, sm: 0.5 },
+          px: { xs: 1.5, sm: 2 }
+        }}
+      >
         <IconButton
           color="inherit"
           aria-label="open drawer"

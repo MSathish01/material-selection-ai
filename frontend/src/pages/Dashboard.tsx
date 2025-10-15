@@ -45,40 +45,57 @@ const Dashboard: React.FC = () => {
 
   return (
     <Box sx={{ maxWidth: '100%', overflow: 'hidden' }}>
-      <Box sx={{ mb: { xs: 2, sm: 3 } }}>
+      <Box sx={{ mb: { xs: 1, sm: 1.5 } }}>
         <Typography 
           variant="h4" 
-          gutterBottom 
           sx={{ 
-            fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' },
+            fontSize: { xs: '1.25rem', sm: '1.375rem', md: '1.5rem' },
             fontWeight: 700,
-            mb: 0.5
+            mb: 0.25,
+            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
           }}
         >
-          Material Selection Dashboard
+          AI-Driven Material Selection Platform
         </Typography>
         <Typography 
           variant="body2" 
           color="text.secondary" 
           sx={{ 
-            fontSize: { xs: '0.813rem', sm: '0.875rem' },
-            opacity: 0.8
+            fontSize: { xs: '0.688rem', sm: '0.75rem' },
+            opacity: 0.75,
+            fontWeight: 500
           }}
         >
-          AI-powered material selection for engineering applications
+          Intelligent material optimization with sustainability metrics & global standards
         </Typography>
       </Box>
 
       {/* Stats Cards */}
-      <Grid container spacing={{ xs: 1.5, sm: 2 }} sx={{ mb: { xs: 2, sm: 3 } }}>
+      <Grid container spacing={{ xs: 1, sm: 1.25 }} sx={{ mb: { xs: 1.25, sm: 1.5 } }}>
         {stats.map((stat, index) => (
           <Grid item xs={6} sm={6} md={3} key={index}>
-            <Card sx={{ height: '100%', borderRadius: 2 }}>
-              <CardContent sx={{ p: { xs: 1.5, sm: 2 }, '&:last-child': { pb: { xs: 1.5, sm: 2 } } }}>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 1, sm: 1.5 } }}>
+            <Card 
+              sx={{ 
+                height: '100%', 
+                borderRadius: 2,
+                background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%)',
+                border: '1px solid rgba(102, 126, 234, 0.1)',
+                transition: 'all 0.2s',
+                '&:hover': {
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 4px 12px rgba(102, 126, 234, 0.15)',
+                  border: '1px solid rgba(102, 126, 234, 0.3)',
+                }
+              }}
+            >
+              <CardContent sx={{ p: { xs: 1, sm: 1.25 }, '&:last-child': { pb: { xs: 1, sm: 1.25 } } }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 0.75, sm: 1 } }}>
                   <Box
                     sx={{
-                      p: { xs: 0.75, sm: 1 },
+                      p: { xs: 0.625, sm: 0.75 },
                       borderRadius: 1.5,
                       backgroundColor: `${stat.color}20`,
                       color: stat.color,
@@ -87,17 +104,17 @@ const Dashboard: React.FC = () => {
                       justifyContent: 'center',
                     }}
                   >
-                    {React.cloneElement(stat.icon, { sx: { fontSize: { xs: 20, sm: 28 } } })}
+                    {React.cloneElement(stat.icon, { sx: { fontSize: { xs: 18, sm: 24 } } })}
                   </Box>
                   <Box sx={{ minWidth: 0, flex: 1 }}>
                     <Typography 
                       variant="h5" 
                       component="div" 
                       sx={{ 
-                        fontSize: { xs: '1.25rem', sm: '1.5rem' },
+                        fontSize: { xs: '1.125rem', sm: '1.375rem' },
                         fontWeight: 700,
                         lineHeight: 1.2,
-                        mb: 0.25
+                        mb: 0.125
                       }}
                     >
                       {stat.value}
@@ -105,7 +122,7 @@ const Dashboard: React.FC = () => {
                     <Typography 
                       color="text.secondary" 
                       sx={{ 
-                        fontSize: { xs: '0.688rem', sm: '0.75rem' },
+                        fontSize: { xs: '0.625rem', sm: '0.688rem' },
                         lineHeight: 1.3,
                         fontWeight: 500
                       }}
@@ -120,31 +137,31 @@ const Dashboard: React.FC = () => {
         ))}
       </Grid>
 
-      <Grid container spacing={{ xs: 1.5, sm: 2 }}>
+      <Grid container spacing={{ xs: 1.25, sm: 1.5 }}>
         {/* Quick Actions */}
         <Grid item xs={12} md={4}>
           <Card sx={{ height: '100%', borderRadius: 2 }}>
-            <CardContent sx={{ p: { xs: 2, sm: 2.5 } }}>
+            <CardContent sx={{ p: { xs: 1.5, sm: 2 } }}>
               <Typography 
                 variant="h6" 
                 gutterBottom 
                 sx={{ 
-                  fontSize: { xs: '0.938rem', sm: '1.063rem' },
+                  fontSize: { xs: '0.875rem', sm: '0.938rem' },
                   fontWeight: 600,
-                  mb: { xs: 1.5, sm: 2 }
+                  mb: { xs: 1.25, sm: 1.5 }
                 }}
               >
                 Quick Actions
               </Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 1, sm: 1.25 } }}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 0.875, sm: 1 } }}>
                 <Button
                   variant="contained"
                   startIcon={<Search />}
                   fullWidth
                   href="/search"
                   sx={{ 
-                    py: { xs: 1, sm: 1.25 },
-                    fontSize: { xs: '0.813rem', sm: '0.875rem' },
+                    py: { xs: 0.75, sm: 1 },
+                    fontSize: { xs: '0.75rem', sm: '0.813rem' },
                     fontWeight: 600
                   }}
                 >
@@ -156,8 +173,8 @@ const Dashboard: React.FC = () => {
                   fullWidth
                   href="/chat"
                   sx={{ 
-                    py: { xs: 1, sm: 1.25 },
-                    fontSize: { xs: '0.813rem', sm: '0.875rem' },
+                    py: { xs: 0.75, sm: 1 },
+                    fontSize: { xs: '0.75rem', sm: '0.813rem' },
                     fontWeight: 600
                   }}
                 >
@@ -169,8 +186,8 @@ const Dashboard: React.FC = () => {
                   fullWidth
                   href="/sustainability"
                   sx={{ 
-                    py: { xs: 1, sm: 1.25 },
-                    fontSize: { xs: '0.813rem', sm: '0.875rem' },
+                    py: { xs: 0.75, sm: 1 },
+                    fontSize: { xs: '0.75rem', sm: '0.813rem' },
                     fontWeight: 600
                   }}
                 >
@@ -184,20 +201,20 @@ const Dashboard: React.FC = () => {
         {/* Materials by Domain */}
         <Grid item xs={12} md={8}>
           <Card sx={{ borderRadius: 2 }}>
-            <CardContent sx={{ p: { xs: 2, sm: 2.5 } }}>
+            <CardContent sx={{ p: { xs: 1.5, sm: 2 } }}>
               <Typography 
                 variant="h6" 
                 gutterBottom 
                 sx={{ 
-                  fontSize: { xs: '0.938rem', sm: '1.063rem' },
+                  fontSize: { xs: '0.875rem', sm: '0.938rem' },
                   fontWeight: 600,
-                  mb: { xs: 1.5, sm: 2 }
+                  mb: { xs: 1.25, sm: 1.5 }
                 }}
               >
                 Materials by Application Domain
               </Typography>
               <Box sx={{ width: '100%', overflowX: 'auto' }}>
-                <ResponsiveContainer width="100%" height={260} minWidth={300}>
+                <ResponsiveContainer width="100%" height={240} minWidth={300}>
                   <BarChart data={domainData}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis 
@@ -220,24 +237,24 @@ const Dashboard: React.FC = () => {
         {/* Recent Searches */}
         <Grid item xs={12} md={6}>
           <Card sx={{ borderRadius: 2 }}>
-            <CardContent sx={{ p: { xs: 2, sm: 2.5 } }}>
+            <CardContent sx={{ p: { xs: 1.5, sm: 2 } }}>
               <Typography 
                 variant="h6" 
                 gutterBottom 
                 sx={{ 
-                  fontSize: { xs: '0.938rem', sm: '1.063rem' },
+                  fontSize: { xs: '0.875rem', sm: '0.938rem' },
                   fontWeight: 600,
-                  mb: { xs: 1.5, sm: 2 }
+                  mb: { xs: 1.25, sm: 1.5 }
                 }}
               >
                 Recent Searches
               </Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 1.25, sm: 1.5 } }}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 1, sm: 1.25 } }}>
                 {recentSearches.map((search, index) => (
                   <Box 
                     key={index} 
                     sx={{ 
-                      p: { xs: 1.5, sm: 2 }, 
+                      p: { xs: 1.25, sm: 1.5 }, 
                       border: '1px solid',
                       borderColor: 'divider',
                       borderRadius: 1.5,
@@ -252,8 +269,8 @@ const Dashboard: React.FC = () => {
                     <Typography 
                       variant="body2" 
                       sx={{ 
-                        mb: 1,
-                        fontSize: { xs: '0.813rem', sm: '0.875rem' },
+                        mb: 0.75,
+                        fontSize: { xs: '0.75rem', sm: '0.813rem' },
                         fontWeight: 500
                       }}
                     >
@@ -265,15 +282,15 @@ const Dashboard: React.FC = () => {
                         size="small" 
                         color="primary"
                         sx={{ 
-                          height: 22,
-                          fontSize: '0.688rem',
+                          height: 20,
+                          fontSize: '0.625rem',
                           fontWeight: 600
                         }}
                       />
                       <Typography 
                         variant="caption" 
                         color="text.secondary"
-                        sx={{ fontSize: { xs: '0.688rem', sm: '0.75rem' } }}
+                        sx={{ fontSize: { xs: '0.625rem', sm: '0.688rem' } }}
                       >
                         {search.time}
                       </Typography>
@@ -288,31 +305,31 @@ const Dashboard: React.FC = () => {
         {/* Sustainability Overview */}
         <Grid item xs={12} md={6}>
           <Card sx={{ borderRadius: 2 }}>
-            <CardContent sx={{ p: { xs: 2, sm: 2.5 } }}>
+            <CardContent sx={{ p: { xs: 1.5, sm: 2 } }}>
               <Typography 
                 variant="h6" 
                 gutterBottom 
                 sx={{ 
-                  fontSize: { xs: '0.938rem', sm: '1.063rem' },
+                  fontSize: { xs: '0.875rem', sm: '0.938rem' },
                   fontWeight: 600,
-                  mb: { xs: 1.5, sm: 2 }
+                  mb: { xs: 1.25, sm: 1.5 }
                 }}
               >
                 Sustainability Overview
               </Typography>
-              <Box sx={{ mb: { xs: 1.5, sm: 2 } }}>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.75 }}>
+              <Box sx={{ mb: { xs: 1.25, sm: 1.5 } }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.5 }}>
                   <Typography 
                     variant="body2" 
                     color="text.secondary"
-                    sx={{ fontSize: { xs: '0.813rem', sm: '0.875rem' }, fontWeight: 500 }}
+                    sx={{ fontSize: { xs: '0.75rem', sm: '0.813rem' }, fontWeight: 500 }}
                   >
                     Recyclable Materials
                   </Typography>
                   <Typography 
                     variant="body2" 
                     color="primary"
-                    sx={{ fontSize: { xs: '0.813rem', sm: '0.875rem' }, fontWeight: 700 }}
+                    sx={{ fontSize: { xs: '0.75rem', sm: '0.813rem' }, fontWeight: 700 }}
                   >
                     73%
                   </Typography>
@@ -320,22 +337,22 @@ const Dashboard: React.FC = () => {
                 <LinearProgress
                   variant="determinate"
                   value={73}
-                  sx={{ height: 6, borderRadius: 3 }}
+                  sx={{ height: 5, borderRadius: 3 }}
                 />
               </Box>
-              <Box sx={{ mb: { xs: 1.5, sm: 2 } }}>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.75 }}>
+              <Box sx={{ mb: { xs: 1.25, sm: 1.5 } }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.5 }}>
                   <Typography 
                     variant="body2" 
                     color="text.secondary"
-                    sx={{ fontSize: { xs: '0.813rem', sm: '0.875rem' }, fontWeight: 500 }}
+                    sx={{ fontSize: { xs: '0.75rem', sm: '0.813rem' }, fontWeight: 500 }}
                   >
                     Low Carbon Footprint
                   </Typography>
                   <Typography 
                     variant="body2" 
                     color="success.main"
-                    sx={{ fontSize: { xs: '0.813rem', sm: '0.875rem' }, fontWeight: 700 }}
+                    sx={{ fontSize: { xs: '0.75rem', sm: '0.813rem' }, fontWeight: 700 }}
                   >
                     58%
                   </Typography>
@@ -344,22 +361,22 @@ const Dashboard: React.FC = () => {
                   variant="determinate"
                   value={58}
                   color="success"
-                  sx={{ height: 6, borderRadius: 3 }}
+                  sx={{ height: 5, borderRadius: 3 }}
                 />
               </Box>
               <Box>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.75 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.5 }}>
                   <Typography 
                     variant="body2" 
                     color="text.secondary"
-                    sx={{ fontSize: { xs: '0.813rem', sm: '0.875rem' }, fontWeight: 500 }}
+                    sx={{ fontSize: { xs: '0.75rem', sm: '0.813rem' }, fontWeight: 500 }}
                   >
                     Certified Sustainable
                   </Typography>
                   <Typography 
                     variant="body2" 
                     color="warning.main"
-                    sx={{ fontSize: { xs: '0.813rem', sm: '0.875rem' }, fontWeight: 700 }}
+                    sx={{ fontSize: { xs: '0.75rem', sm: '0.813rem' }, fontWeight: 700 }}
                   >
                     41%
                   </Typography>
@@ -368,7 +385,7 @@ const Dashboard: React.FC = () => {
                   variant="determinate"
                   value={41}
                   color="warning"
-                  sx={{ height: 6, borderRadius: 3 }}
+                  sx={{ height: 5, borderRadius: 3 }}
                 />
               </Box>
             </CardContent>

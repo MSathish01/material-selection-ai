@@ -11,6 +11,10 @@ import ChatInterface from './pages/ChatInterface';
 import Standards from './pages/Standards';
 import Sustainability from './pages/Sustainability';
 import Comparison from './pages/Comparison';
+import GenerativeMaterials from './pages/GenerativeMaterials';
+import DigitalTwin from './pages/DigitalTwin';
+import MultiObjectiveOptimization from './pages/MultiObjectiveOptimization';
+import SupplyChain from './pages/SupplyChain';
 
 function App() {
   const theme = useTheme();
@@ -34,7 +38,7 @@ function App() {
         component="main"
         sx={{
           flexGrow: 1,
-          p: { xs: 2, sm: 2.5, md: 3 },
+          p: { xs: 1, sm: 1.5, md: 2 },
           mt: { xs: 7, sm: 8 },
           ml: { xs: 0, md: sidebarOpen ? '240px' : 0 },
           transition: 'margin-left 0.3s ease',
@@ -51,6 +55,10 @@ function App() {
           <Route path="/standards" element={<Standards />} />
           <Route path="/sustainability" element={<Sustainability />} />
           <Route path="/comparison" element={<Comparison />} />
+          <Route path="/generative" element={<GenerativeMaterials />} />
+          <Route path="/digital-twin" element={<DigitalTwin />} />
+          <Route path="/optimization" element={<MultiObjectiveOptimization />} />
+          <Route path="/supply-chain" element={<SupplyChain />} />
         </Routes>
       </Box>
       
